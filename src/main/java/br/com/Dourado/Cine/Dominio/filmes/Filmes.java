@@ -1,4 +1,4 @@
-package br.com.Dourado.Cine.Dominio;
+package br.com.Dourado.Cine.Dominio.filmes;
 
 import br.com.Dourado.Cine.Dominio.filmes.DadosFilme;
 import jakarta.persistence.*;
