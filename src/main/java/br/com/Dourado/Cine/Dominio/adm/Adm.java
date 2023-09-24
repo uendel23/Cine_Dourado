@@ -1,6 +1,7 @@
-package br.com.Dourado.Cine.Dominio;
+package br.com.Dourado.Cine.Dominio.adm;
 
 import br.com.Dourado.Cine.Dominio.Cliente.DadosCliente;
+import br.com.Dourado.Cine.Dominio.Users;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Adm extends Users{
+public class Adm extends Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
