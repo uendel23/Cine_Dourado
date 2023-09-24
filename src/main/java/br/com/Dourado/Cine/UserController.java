@@ -46,8 +46,14 @@ public class UserController {
         return ResponseEntity.ok(new DadosListagemClientes(cliente));
     }
 
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity inativar (@PathVariable Long id){
+        var cliente = repository.getReferenceById(id);
+        cliente.inativar();
 
-
+        return ResponseEntity.noContent().build();
+    }
 
 
 }

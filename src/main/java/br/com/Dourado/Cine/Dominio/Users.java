@@ -27,5 +27,8 @@ public class Users  {
         this.cpf = dados.cpf();
     }
 
+    public void inativar() {
+        this.ativo = false;
+    }
 }
 
