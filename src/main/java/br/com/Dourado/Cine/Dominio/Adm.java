@@ -18,9 +18,9 @@ public class Adm extends Users{
     private Long id;
 
     public Adm (DadosCliente dados) {
-        super.setName(dados.nome());
+        super.setNome(dados.nome());
         super.setEmail(dados.email());
-        super.setCPF(dados.cpf());
+        super.setCpf(dados.cpf());
 
     }
 

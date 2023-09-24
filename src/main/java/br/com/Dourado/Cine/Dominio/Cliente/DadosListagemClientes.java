@@ -9,6 +9,6 @@ public record DadosListagemClientes(
 ) {
 
     public DadosListagemClientes(Cliente cliente) {
-        this(cliente.getId(),cliente.getNome(), cliente.getEmail(), cliente.getCPF());
+        this(cliente.getId(),cliente.getNome(), cliente.getEmail(), cliente.getCpf());
     }
 }

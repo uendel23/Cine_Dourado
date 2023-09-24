@@ -20,7 +20,7 @@ public class Cliente extends Users {
     public Cliente(DadosCliente dados) {
         super.setNome(dados.nome());
         super.setEmail(dados.email());
-        super.setCPF(dados.cpf());
+        super.setCpf(dados.cpf());
 
     }
 }

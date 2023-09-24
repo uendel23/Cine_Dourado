@@ -2,6 +2,7 @@ package br.com.Dourado.Cine;
 
 import br.com.Dourado.Cine.Dominio.*;
 import br.com.Dourado.Cine.Dominio.Cliente.Cliente;
+import br.com.Dourado.Cine.Dominio.Cliente.DadosAtualizacaoCliente;
 import br.com.Dourado.Cine.Dominio.Cliente.DadosCliente;
 import br.com.Dourado.Cine.Dominio.Cliente.DadosListagemClientes;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,17 @@ public class UserController {
         var page = repository.findAllByAtivoTrue(paginacao);
         return ResponseEntity.ok(page);
     }
+
+    @PutMapping
+    @Transactional
+    public ResponseEntity<DadosListagemClientes> atualizar(@RequestBody DadosAtualizacaoCliente dados ){
+        var cliente = repository.getReferenceById(dados.id());
+        cliente.atualizar(dados);
+        return ResponseEntity.ok(new DadosListagemClientes(cliente));
+    }
+
+
+
 
 
 }
