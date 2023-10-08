@@ -7,7 +7,7 @@ public record DadosListagemFilmes(
 
         @NotNull
         @NotBlank
-        String nome,
+        String titulo,
         @NotNull
         @NotBlank
         String descricao,

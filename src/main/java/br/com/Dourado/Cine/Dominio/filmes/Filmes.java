@@ -17,14 +17,13 @@ public class Filmes {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String titulo;
-    private String descrição;
+    private String descricao;
     private boolean emCartaz = true;
 
 
     public Filmes(DadosFilme dados) {
         this.titulo = dados.titulo();
-        this.descrição = dados.descricao();
+        this.descricao = dados.descricao();
     }
 }
