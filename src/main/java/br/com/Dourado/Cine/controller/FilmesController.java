@@ -23,9 +23,7 @@ public class FilmesController {
     @Transactional
     public ResponseEntity cadastrar (@RequestBody DadosFilme dados){
         Filmes filmes = new Filmes(dados);
-
         repository.save(filmes);
-
         return  ResponseEntity.ok(filmes);
     }
 
